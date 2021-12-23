@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 
 class InputOutputParameterTest {
@@ -25,8 +26,8 @@ class InputOutputParameterTest {
     InputOutputParameter inout = new InputOutputParameter();
     StringBuilder builder = new StringBuilder();
     builder.append("Hallo Freunde!");
-    StringBuilder result = inout.getString(builder);
-    assertThat(result.toString(), is("Hallo Ilja!"));
-    assertThat(builder.toString(), is("Hallo Freunde!"));
+    inout.getString(builder);
+    assertThat(builder.toString(), containsString("Hallo Ilja!"));
+    assertThat(builder.toString(), containsString("Hallo Freunde!"));
   }
 }

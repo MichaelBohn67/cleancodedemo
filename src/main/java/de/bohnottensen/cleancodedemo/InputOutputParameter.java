@@ -19,10 +19,9 @@ public class InputOutputParameter {
    * @param builder StringBuilder
    * @return StringBuilder
    */
-  public StringBuilder getString(StringBuilder builder) {
+  public void getString(StringBuilder builder) {
     builder.delete(0,builder.length());
     builder.append("Hallo Ilja!");
-    return builder;
   }
 
 }
