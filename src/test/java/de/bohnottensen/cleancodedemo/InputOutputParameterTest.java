@@ -27,7 +27,6 @@ class InputOutputParameterTest {
     StringBuilder builder = new StringBuilder();
     builder.append("Hallo Freunde!");
     inout.getString(builder);
-    assertThat(builder.toString(), containsString("Hallo Ilja!"));
-    assertThat(builder.toString(), containsString("Hallo Freunde!"));
+    assertThat(builder.toString(), is("Hallo Ilja!"));
   }
 }
